@@ -49,7 +49,7 @@
 welcome_screen(Req, Headers, _Service) ->
     H = [{"Content-Type", "text/plain; charset=UTF-8"}],
     sockjs_http:reply(200, H ++ Headers,
-          "Welcome to SockJS!\n", Req).
+          "suxjs\n", Req).
 
 -spec options(req(), headers(), service()) -> req().
 options(Req, Headers, _Service) ->

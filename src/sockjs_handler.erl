@@ -145,7 +145,7 @@ filters() ->
      {t("/eventsource"),             [{'GET',     send, eventsource,    [h_sid, h_no_cache]}]},
      {t("/htmlfile"),                [{'GET',     send, htmlfile,       [h_sid, h_no_cache]}]},
      {p("/websocket"),               [{'GET',     none, rawwebsocket,   []}]},
-     {p(""),                         [{'GET',     none, welcome_screen, []}]},
+     {p(""),                         [{'GET',     none, welcome_screen, [xhr_cors]}]},
      {p("/iframe[0-9-.a-z_]*.html"), [{'GET',     none, iframe,         [cache_for]}]},
      {p("/info"),                    [{'GET',     none, info_test,      [h_no_cache, xhr_cors]},
                                       {'OPTIONS', none, options,        [h_sid, xhr_cors, cache_for, xhr_options_get]}]}
